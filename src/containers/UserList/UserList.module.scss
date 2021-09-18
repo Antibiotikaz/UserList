@@ -1,0 +1,16 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins";
+.UserListContainer {
+  width: 70%;
+  margin: 2rem auto;
+  box-shadow: $mainBoxShadow;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  @include respond(laptop) {
+    width: 80%;
+  }
+  @include respond(mobile) {
+    width: 100%;
+    padding: 0;
+  }
+}

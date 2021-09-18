@@ -1,0 +1,69 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins";
+
+.ModalContainer {
+  @include respond(mobile) {
+    width: 75%;
+    margin: 0 auto;
+  }
+  h1 {
+    text-transform: uppercase;
+    margin: 1rem;
+    font-size: $mediumFontSize;
+    font-weight: 700;
+    letter-spacing: 0.65rem;
+    text-align: center;
+    font-family: $Roboto;
+    opacity: 0.65;
+    @include respond(mobile) {
+      font-size: $smallFontSize;
+      letter-spacing: 0.1rem;
+    }
+  }
+  .Form {
+    display: flex;
+    flex-direction: column;
+    .InputField {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.8rem;
+      font-family: $Roboto;
+      align-items: center;
+      @include respond(mobile) {
+        flex-direction: column;
+      }
+      input {
+        padding: 0.7rem 1.5rem;
+        margin: 0.2rem 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 0.4rem;
+        box-sizing: border-box;
+      }
+    }
+    .Error {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffdddd;
+      padding: 0.2rem;
+      border-radius: 0.6rem;
+      color: #f44336;
+    }
+
+    button {
+      width: 100%;
+      background-image: $linearLightBlue;
+      color: $white;
+      padding: 0.7rem 1.5rem;
+      margin: 0.2rem 0;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      @include respond(mobile) {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

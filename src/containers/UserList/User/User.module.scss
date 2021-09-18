@@ -1,0 +1,58 @@
+@import "../../../styles/global.scss";
+@import "../../../styles/mixins";
+
+.UserBox {
+  box-shadow: $mainBoxShadow;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  @include respond(small-laptop) {
+    flex-direction: column;
+  }
+  @include respond(mobileSmall) {
+    margin: 1rem 0;
+  }
+  div {
+    &:first-child {
+      width: 12%;
+      @include respond(small-laptop) {
+        margin-bottom: 1rem;
+      }
+    }
+    &:nth-child(2) {
+      width: 83%;
+      display: flex;
+      white-space: nowrap;
+      @include respond(small-laptop) {
+        margin-bottom: 1rem;
+        flex-direction: column;
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+      @include respond(mobileSmall) {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      width: 5%;
+    }
+    img {
+      border-radius: 50%;
+      width: 4rem;
+    }
+    p {
+      font-family: $Roboto;
+      margin-right: 1rem;
+      font-weight: 600;
+      span {
+        margin-right: 0.2rem;
+      }
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+}

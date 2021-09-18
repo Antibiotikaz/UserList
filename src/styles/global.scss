@@ -1,0 +1,21 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+//Colors
+$linearLightBlue: linear-gradient(to right, #5b7cfa, #3659db);
+$white: #fff;
+//Font Sizes
+$largeFontSize: 2.4rem;
+$mediumFontSize: 1.8rem;
+$smallFontSize: 1.4rem;
+// Line-Heights
+
+//Font Family
+$Roboto: "Roboto Mono", monospace;
+//BoxShadows
+$mainBoxShadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+// Small tablets and large smartphones (landscape view)
+$mobileSmall: 370px;
+$mobile: 675px;
+$small-laptop: 1100px;
+$laptop: 1440px;

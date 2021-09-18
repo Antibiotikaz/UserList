@@ -1,0 +1,23 @@
+@import "./global.scss";
+@mixin respond($breakpoint) {
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobileSmall {
+    @media only screen and (max-width: $mobileSmall) {
+      @content;
+    }
+  }
+  @if $breakpoint==small-laptop {
+    @media only screen and (max-width: $small-laptop) {
+      @content;
+    }
+  }
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: $laptop) {
+      @content;
+    }
+  }
+}
