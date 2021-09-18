@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import EditModal from '../../../components/Modals/EditModal'
 import NoProfile from '../../../assets/images/no_profile.png'
 import PopUp from '../../PopUp/index'
-import { useMedia } from 'react-with-media';
 
 interface UserInterface {
     user: {

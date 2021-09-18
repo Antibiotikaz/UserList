@@ -3,8 +3,8 @@ import {Actions} from '../Actions/userActions'
 import {UserInterface} from "../Actions/userActions"
 interface InitialStateInterface {
   users:  Array<UserInterface>,
-  total_pages:any,
-  page:any,
+  total_pages:number,
+  page:number,
 }
 
 const initialState:InitialStateInterface = {
@@ -14,6 +14,7 @@ const initialState:InitialStateInterface = {
 };
 
 const playerReducer = (state = initialState, action: Actions) => {
+
   switch (action.type) {
     case types.GET_USERS:
       return {

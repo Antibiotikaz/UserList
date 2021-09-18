@@ -23,8 +23,8 @@ const [error, setError] = useState<boolean>(false)
 const [errorMsg, setErrorMsg] = useState<string>('')
 const body = {
     id: props.user.id,
-    name,
-    lastName,
+    first_name:name,
+    last_name:lastName,
     email,
     avatar: props.user.avatar
 }

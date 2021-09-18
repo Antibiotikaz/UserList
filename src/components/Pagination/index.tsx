@@ -3,6 +3,7 @@ import {getUsersForPagination } from '../../store/Actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import classes from './Pagination.module.scss'
 
+
 const Pagination = () => {
   const totalPages = useSelector((state: any) => state.userData.total_pages);
   const currentPage = useSelector((state: any) => state.userData.page);

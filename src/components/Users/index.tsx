@@ -6,6 +6,7 @@ import {UserInterface} from '../../store/Actions/userActions'
 import { RiUserAddLine } from 'react-icons/ri';
 import Modal from 'simple-react-modal'
 import AddModal from '../Modals/AddModal';
+
 const Users = () => {
     const users = useSelector((state: any) => state.userData.users);
     const [openAddModal, setOpenAddModal] = useState<boolean>(false);

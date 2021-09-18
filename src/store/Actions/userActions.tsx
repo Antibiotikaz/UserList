@@ -17,11 +17,11 @@ export interface GetUsers
   }
   export interface EditUser
   extends Action<typeof types.EDIT_USER> {
-    payload: any
+    payload: {id:number,name: string, lastName:string, email: string, avatar:string}
   }
   export interface AddUser
   extends Action<typeof types.ADD_USER> {
-    payload: any
+    payload: UserInterface
   }
 
   export interface DeleteUser
@@ -59,7 +59,7 @@ export const getUsersForPagination = (index: number) => async (dispatch: Dispatc
 };
 
 
-export const editUser = (body:any) => async (dispatch: Dispatch) => {
+export const editUser = (body:UserInterface) => async (dispatch: Dispatch) => {
 
   try {
     const responseData = await axios.put(`${hostUrl}/api/users/2`, body);
@@ -72,7 +72,7 @@ export const editUser = (body:any) => async (dispatch: Dispatch) => {
   }
 };
 
-export const addUser = (body:any) => async (dispatch: Dispatch) => {
+export const addUser = (body:UserInterface) => async (dispatch: Dispatch) => {
 
   try {
     const responseData = await axios.post(`${hostUrl}/api/users`, body);
@@ -85,7 +85,7 @@ export const addUser = (body:any) => async (dispatch: Dispatch) => {
   }
 };
 
-export const deleteUser = (id:any) =>  (dispatch: Dispatch) => {
+export const deleteUser = (id:number) =>  (dispatch: Dispatch) => {
   try {
     dispatch({
       type: types.DELETE_USER,
